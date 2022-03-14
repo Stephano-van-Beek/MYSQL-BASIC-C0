@@ -166,41 +166,7 @@ SELECT COUNT(*) FROM videogamesales WHERE publisher = "nintendo";
 228	
 
 -- Opdracht 9
-127.0.0.1/mod-mysql-basic-opdracht/videogamesales/		http://localhost/phpmyadmin/index.php?route=/table/sql&db=mod-mysql-basic-opdracht&table=videogamesales
-
-   Showing rows 0 - 24 (93 total, Query took 0.0039 seconds.)
-
-
-SELECT name,year FROM `videogamesales` WHERE genre='Racing' AND publisher='Nintendo' OR publisher='Activision';
-
-
-name	year	
-Mario Kart Wii 	2008	
-Mario Kart DS 	2005	
-Call of Duty: Modern Warfare 3 	2011	
-Call of Duty: Black Ops 	2010	
-Call of Duty: Black Ops 3 	2015	
-Call of Duty: Black Ops II 	2012	
-Call of Duty: Black Ops II 	2012	
-Call of Duty: Modern Warfare 2 	2009	
-Call of Duty: Modern Warfare 3 	2011	
-Call of Duty: Black Ops 	2010	
-Mario Kart 7 	2011	
-Call of Duty: Modern Warfare 2 	2009	
-Call of Duty: Ghosts 	2013	
-Mario Kart 64 	1996	
-Call of Duty: Ghosts 	2013	
-Call of Duty 4: Modern Warfare 	2007	
-Super Mario Kart 	1992	
-Call of Duty: Advanced Warfare 	2014	
-Call of Duty: World at War 	2008	
-Call of Duty: Black Ops 3 	2015	
-Mario Kart 8 	2014	
-Mario Kart: Double Dash!! 	2003	
-Call of Duty 4: Modern Warfare 	2007	
-World of Warcraft 	2004	
-Destiny 	2014	
-
+SELECT name,year FROM videogames WHERE genre="racing" AND publisher = "Nintendo" OR publisher = "Activision" AND genre="racing";
 
 -- Opdracht 10
 127.0.0.1/mod-mysql-basic-opdracht/videogamesales/		http://localhost/phpmyadmin/index.php?route=/database/sql&db=mod-mysql-basic-opdracht
@@ -219,7 +185,7 @@ SELECT ROUND(AVG(NA_Sales)) AS Gemiddelde_aantal_verkoop_Noord_Amerika, ROUND(AV
 DELETE FROM videogamesales WHERE name="Halo 2" AND platform="XB"
 
 -- Opdracht 12
-DELETE FROM videogamesales WHERE year = 2012 OR publisher = "ubisoft"
+DELETE FROM videogamesales WHERE year = 2012 OR publisher = "Ubisoft"
 -- Opdracht 13
 
 DELETE FROM videogamesales WHERE genre = "Adventure" AND publisher = "Nintendo"
